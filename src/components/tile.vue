@@ -30,7 +30,7 @@ export default {
 			bottom: 0;
 			font-size: 10.8px;
 			color: white;
-			font-family: sans-serif;
+			font-family: 'Lato', sans-serif;
 			font-weight: 700;
 			padding-bottom: .8em;
 			padding-left: .8em;
