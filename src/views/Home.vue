@@ -15,11 +15,8 @@
 </script>
 
 <style lang="scss">
-	.home {
-		width: 100vw;
-	}
 	.test {
-		width: 30%;
-		opacity: .5;
+		width: 100.8px;
+		height: 142.8px;
 	}
 </style>

@@ -21,7 +21,6 @@ export default {
 		background-position: center;
 		position: relative;
 		font-family: 'Lato', sans-serif;
-		border-radius: 22px 22px 0 0;
 		overflow: hidden;
 		.title {
 			width: calc(336px - .8em - .2em);
@@ -30,7 +29,7 @@ export default {
 			background: linear-gradient(0deg, #031627 0%, transparent 90%);
 			position: absolute;
 			bottom: 0;
-			font-size: 36px;
+			font-size: 10.8px;
 			color: white;
 			font-family: sans-serif;
 			font-weight: 700;
