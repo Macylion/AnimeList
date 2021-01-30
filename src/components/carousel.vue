@@ -34,11 +34,17 @@ export default {
 
 <style lang="scss" scoped>
 	.carousel{
-		overflow: hidden;
+		white-space: nowrap;
+		max-height: 225px;
+		overflow-x: scroll;
+		overflow-y: hidden;
 		margin-top: -7%;
 		width: 99%;
 		padding-left: 1%;
 		text-align: center;
+		&::-webkit-scrollbar{
+			display: none;
+		}
 	}
 
 </style>
