@@ -8,6 +8,14 @@
   </div>
 </template>
 
+<script>
+export default {
+	mounted() {
+		window.location.href = 'anilist.co'
+	}
+}
+</script>
+
 <style lang="scss">
 	body {
 		background: #031627;
