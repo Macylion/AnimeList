@@ -1,6 +1,6 @@
 <template>
 	<div class="home">
-		<tile/>
+		<tile :class="'test'" />
 	</div>
 </template>
 
@@ -13,3 +13,13 @@
 		}
 	}
 </script>
+
+<style lang="scss">
+	.home {
+		width: 100vw;
+	}
+	.test {
+		width: 30%;
+		opacity: .5;
+	}
+</style>

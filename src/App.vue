@@ -9,5 +9,7 @@
 </template>
 
 <style lang="scss">
-
+	body {
+		background: #031627;
+	}
 </style>
