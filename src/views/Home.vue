@@ -1,14 +1,15 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-  </div>
+	<div class="home">
+		<tile/>
+	</div>
 </template>
 
 <script>
-
-export default {
-  name: 'Home',
-  components: {
-  }
-}
+	import tile from '../components/tile';
+	export default{
+		name: 'Home',
+		components:{
+			tile
+		}
+	}
 </script>
