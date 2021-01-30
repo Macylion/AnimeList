@@ -1,15 +1,6 @@
 <template>
 	<div class="carousel">
-		<tile />
-		<tile />
-		<tile />
-		<tile />
-		<tile />
-		<tile />
-		<tile />
-		<tile />
-		<tile />
-		<tile />
+		<tile name="horimiya" img="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx124080-yXw5kfUubV8s.jpg"/>
 	</div>
 </template>
 
@@ -18,6 +9,14 @@ import tile from './tile';
 export default {
 	components:{
 		tile
+	},
+	data(){
+		return{
+			anime:[]
+		}
+	},
+	mounted(){
+		
 	}
 }
 </script>

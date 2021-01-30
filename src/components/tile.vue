@@ -1,13 +1,13 @@
 <template>
-	<div class="container">
+	<div class="container" :style="'background-image: url(' + img + ')'">
 		<div class="shadow"></div>
-		<div class="title">Horimiya</div>
+		<div class="title">{{name}}</div>
 	</div>
 </template>
 
 <script>
 export default {
-	
+	props:['name','img']
 	}
 </script>
 
@@ -17,7 +17,7 @@ export default {
 		display: inline-block;
 		height: 223px;
 		width: 153.3px;
-		background-image: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx124080-yXw5kfUubV8s.jpg");
+		// background-image: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx124080-yXw5kfUubV8s.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
