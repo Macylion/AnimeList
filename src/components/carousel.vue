@@ -1,23 +1,34 @@
 <template>
 	<div class="carousel">
-		<tile name="horimiya" img="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx124080-yXw5kfUubV8s.jpg"/>
+		<tile 
+			v-for="anime in animes"
+			:key="anime.mal_id"
+			:name="anime.title" 
+			:img="anime.image_url"
+		/>
 	</div>
 </template>
 
 <script>
 import tile from './tile';
+const axios = require('axios').default;
+
 export default {
-	components:{
+	components: {
 		tile
 	},
-	data(){
+	data() {
 		return{
-			anime:[]
+			animes: [],
 		}
 	},
 	mounted(){
-		
-	}
+		axios.get('https://api.jikan.moe/v3/top/anime/1/airing')
+		.then(res => res.data.top)
+		.then(topAnime => {
+			this.animes = [...this.animes, ...topAnime.filter(el => el.type === "TV")]
+		})
+	},
 }
 </script>
 
