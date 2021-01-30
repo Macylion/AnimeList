@@ -11,10 +11,10 @@ export default {
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.container {
-		height: 476px;
-		width: 336px;
+		height: 142.8px;
+		width: 100.8px;
 		background-image: url("https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx124080-yXw5kfUubV8s.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -22,9 +22,8 @@ export default {
 		position: relative;
 		font-family: 'Lato', sans-serif;
 		overflow: hidden;
-		.title {
-			width: calc(336px - .8em - .2em);
-			// height: 143px;
+		.title{
+			width: calc(100.8px - .8em - .2em);
 			background: #031627;
 			background: linear-gradient(0deg, #031627 0%, transparent 90%);
 			position: absolute;
@@ -36,7 +35,7 @@ export default {
 			padding-bottom: .8em;
 			padding-left: .8em;
 			padding-right: .2em;
-			padding-top: calc(143px - 69px);
+			padding-top: calc(142.8px - 69px);
 			overflow: hidden;
 			display: inline-block;
 			white-space: nowrap;
