@@ -15,8 +15,6 @@
 </script>
 
 <style lang="scss">
-	.home {
-	}
 	.test {
 		width: 100.8px;
 		height: 142.8px;
