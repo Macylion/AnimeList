@@ -2,20 +2,20 @@
 	<div class="home">
 		<topBar />
 		<banner />
-		<tile :class="'test'" />
+		<carousel />
 	</div>
 </template>
 
 <script>
 	import banner from '../components/banner';
 	import topBar from '../components/topBar';
-	import tile from '../components/tile';
+	import carousel from '../components/carousel';
 	export default{
 		name: 'Home',
 		components:{
 			banner,
 			topBar,
-			tile
+			carousel
 		}
 	}
 </script>
