@@ -1,20 +1,20 @@
 <template>
 	<div class="home">
-		<topBar />
+		<top-bar />
 		<banner />
 		<carousel />
 	</div>
 </template>
 
 <script>
-	import banner from '../components/banner';
-	import topBar from '../components/topBar';
-	import carousel from '../components/carousel';
+	import topBar from '../components/topBar'
+	import banner from '../components/banner'
+	import carousel from '../components/carousel'
 	export default{
 		name: 'Home',
 		components:{
-			banner,
 			topBar,
+			banner,
 			carousel
 		}
 	}

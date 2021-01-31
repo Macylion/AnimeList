@@ -1,10 +1,5 @@
 <template>
-	<div class="bar">
-		<div id="hamburger">
-			<div class="hamburger_bar"></div>
-			<div class="hamburger_bar"></div>
-			<div class="hamburger_bar"></div>
-		</div>
+	<div id="topBar-container">
 	</div>
 </template>
 
@@ -14,26 +9,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-	.bar{
-		overflow: hidden;
-		background-color: #031627;
+<style lang="scss">
+	#topBar-container{
+		position: fixed;
+		top: 0;
+		height: 40px;
 		width: 100%;
-		height: 47px;
-		#hamburger{
-			margin-top: 13px;
-			margin-left: 3.12%;
-			width: 25px;
-			.hamburger_bar{
-				border-radius: 100px;
-				width: 25px;
-				height: 4px;
-				margin-bottom: 5px;
-				background-color: #4a88cf;
-			}
-			&:hover{
-				cursor: pointer;
-			}
-		}
+		background-color: #031627;
 	}
 </style>
