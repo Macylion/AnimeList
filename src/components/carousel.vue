@@ -1,9 +1,19 @@
 <template>
 	<div class="carousel-container">
-		<img class="left-row" src="https://cdn.discordapp.com/attachments/804903980030623806/805235949041614928/Vector_1.png">
-		<img class="left-right" src="https://cdn.discordapp.com/attachments/804903980030623806/805238221407649812/Vector_2.png">
+		<!-- set -1 to scroll entire div width -->
+		<img
+			@click="move('right', -1, $event)" 
+			class="left-row" 
+			src="https://cdn.discordapp.com/attachments/804903980030623806/805235949041614928/Vector_1.png"
+		>
+		<!-- set 238 to scroll 238px -->
+		<img 
+			@click="move('left', 238, $event)" 
+			class="left-right" 
+			src="https://cdn.discordapp.com/attachments/804903980030623806/805238221407649812/Vector_2.png"
+		>
 		<div class="carousel-title">Top popular anime</div>
-		<div class="carousel">
+		<div ref="carousel" class="carousel">
 			<tile 
 				v-for="anime in animes"
 				:key="anime.mal_id"
@@ -17,23 +27,34 @@
 <script>
 	import tile from './tile';
 	const axios = require('axios').default;
-export default {
-	components: {
-		tile
-	},
-	data() {
-		return{
-			animes: [],
+	export default {
+		components: {
+			tile
+		},
+		data() {
+			return{
+				animes: [],
+			}
+		},
+		mounted(){
+			axios.get('https://api.jikan.moe/v3/top/anime/1/airing')
+			.then(res => res.data.top)
+			.then(topAnime => {
+				this.animes = [...this.animes, ...topAnime.filter(el => el.type === "TV")]
+			})
+		},
+		methods: {
+			move(direction, power) {
+				if(power == -1)
+					power = this.$refs.carousel.offsetWidth
+
+				if(direction === 'right')
+					this.$refs.carousel.scrollLeft += power
+				else if(direction === 'left')
+					this.$refs.carousel.scrollLeft -= power
+			}
 		}
-	},
-	mounted(){
-		axios.get('https://api.jikan.moe/v3/top/anime/1/airing')
-		.then(res => res.data.top)
-		.then(topAnime => {
-			this.animes = [...this.animes, ...topAnime.filter(el => el.type === "TV")]
-		})
-	},
-}
+	}
 </script>
 
 <style lang="scss">
@@ -50,6 +71,7 @@ export default {
 			top: 50%;
 			z-index: 10;
 			opacity: .5;
+			cursor: pointer;
 		}
 		.left-right{
 			position: absolute;
@@ -57,6 +79,7 @@ export default {
 			top: 50%;
 			z-index: 10;
 			opacity: .5;
+			cursor: pointer;
 		}
 		.carousel-title{
 			widows: 100%;
@@ -67,6 +90,7 @@ export default {
 			font-family: 'Lato', sans-serif;
 		}
 		.carousel{
+			scroll-behavior: smooth;
 			white-space: nowrap;
 			overflow-x: scroll;
 			overflow-y: hidden;
