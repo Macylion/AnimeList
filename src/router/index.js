@@ -17,6 +17,10 @@ const routes = [
 		path: '/create-anime',
 		name: 'CreateAnime',
 		component: () => import('../views/CreateAnime.vue')
+	}, {
+		path: '/profile/:id',
+		name: 'Profile',
+		component: () => import('../views/Profile.vue')
 	}
 ]
 

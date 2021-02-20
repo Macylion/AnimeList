@@ -62,7 +62,8 @@
 		position: relative;
 		text-align: center;
 		margin-top: -14vh;
-		width: calc(100% - 80px);
+		// width: calc(100% - 80px);
+		width: 100%;
 		padding-left: 40px;
 		padding-right: 40px;
 		.left-row{
@@ -82,7 +83,7 @@
 			cursor: pointer;
 		}
 		.carousel-title{
-			widows: 100%;
+			width: 100%;
 			padding-bottom: 10px;
 			text-align: left !important;
 			font-size: 30px;
