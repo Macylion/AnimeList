@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div v-if="this.medium" class="medium-container" :style="cssVars()">
-			<section class="hero is-medium is-primary">
+			<section class="hero is-medium is-primary medium-banner">
 				<div class="hero-body">
 					<p class="title">
 						{{ medium.title.english }}
