@@ -32,6 +32,17 @@ export default {
 		  format
 		  status
 		  genres
+		  studios {
+			edges {
+			  id
+			  isMain
+			  node {
+				id
+				name
+				isAnimationStudio
+			  }
+			}
+		  }
 		  characters {
 			edges {
 			  node {
@@ -62,8 +73,24 @@ export default {
 			thumbnail
 			id
 		  }
+		  relations {
+			edges {
+			  id
+			  relationType
+			  node {
+				id
+				format
+				title {
+				  romaji
+				  english
+				  native
+				}
+			  }
+			}
+		  }
 		}
-	  }	  
+	  }
+	  
 	`,
 	url: "https://graphql.anilist.co",
 }
