@@ -62,12 +62,21 @@
 				</div>
 				<div class="tile">
 					<div class="tile is-vertical">
-						<div class="tile is-parent">
+						<div class="tile is-parent is-vertical">
 							<div class="tile">
 								<article class="tile is-child notification is-success">
 									<div class="content">
 										<p class="title">Tall tile</p>
 										<p class="subtitle">With even more content</p>
+										<div class="content">
+											<iframe :src="'https://www.youtube.com/embed/' + medium.trailer.id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="tile">
+								<article class="tile is-child is-success">
+									<div class="content">
 										<div class="content">
 											<iframe :src="'https://www.youtube.com/embed/' + medium.trailer.id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 										</div>
