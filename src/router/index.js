@@ -18,9 +18,17 @@ const routes = [
 		name: 'CreateAnime',
 		component: () => import('../views/CreateAnime.vue')
 	}, {
-		path: '/profile/:id',
-		name: 'Profile',
-		component: () => import('../views/Profile.vue')
+		path: '/anime/:item',
+		name: 'Anime',
+		component: () => import('../views/Medium.vue')
+	}, {
+		path: '/manga/:item',
+		name: 'Manga',
+		component: () => import('../views/Medium.vue')
+	}, {
+		path: '/i/:item',
+		name: 'Medium Item',
+		component: () => import('../views/Medium.vue')
 	}
 ]
 

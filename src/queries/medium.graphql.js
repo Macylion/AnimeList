@@ -60,15 +60,10 @@ export default {
 		  trailer {
 			site
 			thumbnail
+			id
 		  }
 		}
 	  }	  
 	`,
 	url: "https://graphql.anilist.co",
-	body(variables){
-		return JSON.stringify({
-			query: this.query,
-			variables: variables
-		})
-	}
 }
