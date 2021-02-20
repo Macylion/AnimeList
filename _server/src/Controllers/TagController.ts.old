@@ -1,0 +1,37 @@
+import Tag from './../Models/Tag';
+import IController from './IController';
+
+class TagController implements IController {
+	create(req, res) {
+		Tag.create(req.body)
+			.then(data => res.send(data))
+			.catch(err => res.send({ error: err.errors[0].message } ))
+	}
+	findAll(req, res) {
+		Tag.findAll()
+			.then( data => res.send(data));
+	}
+	findOne(req, res) {
+		const Id = req.params.id;
+		Tag.findByPk(Id)
+			.then( data => res.send(data) );
+	}
+	update(req, res) {
+		const data = req.body;
+		Tag.findByPk(req.params.id)
+			.then( tag => {
+				tag.update(data)
+				.then( data => res.send(data) )
+				.catch(e => res.send(e) )
+			})
+			.catch(e => res.send(e) )
+	}
+	remove(req, res) {
+		Tag.findByPk(req.params.id)
+			.then( tag => tag.destroy())
+			.then( data => res.send(data) )
+			.catch(e => res.send(e) )
+	}
+}
+
+export default new TagController();
