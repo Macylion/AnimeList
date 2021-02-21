@@ -9,26 +9,6 @@ const routes = [
 		path: '/',
 		name: 'Home',
 		component: Home
-	}, {
-		path: '/about',
-		name: 'About',
-		component: () => import('../views/About.vue')
-	}, {
-		path: '/create-anime',
-		name: 'CreateAnime',
-		component: () => import('../views/CreateAnime.vue')
-	}, {
-		path: '/anime/:item',
-		name: 'Anime',
-		component: () => import('../views/Medium.vue')
-	}, {
-		path: '/manga/:item',
-		name: 'Manga',
-		component: () => import('../views/Medium.vue')
-	}, {
-		path: '/i/:item',
-		name: 'Medium Item',
-		component: () => import('../views/Medium.vue')
 	}
 ]
 
