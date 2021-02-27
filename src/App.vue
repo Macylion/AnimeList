@@ -4,12 +4,17 @@
 			<!-- <router-link to="/">Home</router-link> |
 			<router-link to="/about">About</router-link> -->
 		<!-- </div> -->
-		<router-view/>
+		<top-bar />
+		<router-view />
 	</div>
 </template>
 
 <script>
+import TopBar from './components/top-bar/TopBar';
 export default {
+	components: {
+		TopBar,
+	}
 
 }
 </script>
