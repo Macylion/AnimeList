@@ -6,8 +6,8 @@
 				<span>Anime</span>
 				<span>Manga</span>
 			</div>
-			<tiles-carousel/>
 		</div>
+		<tiles-carousel/>
 	</div>
 </template>
 
@@ -28,6 +28,7 @@ export default {
 		background-color: var(--primary);
 		padding-top: 16px;
 		#tilesbar-selection{
+			position: absolute;
 			padding-top: 7px;
 			font-size: 20px;
 			display: flex;
@@ -40,6 +41,7 @@ export default {
 			padding-left: 13px;
 			border-radius: 2px;
 			overflow: hidden;
+			z-index: 100;
 			&:hover{
 					height: 76px;
 					cursor: pointer;
