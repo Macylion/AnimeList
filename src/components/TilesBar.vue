@@ -6,12 +6,17 @@
 				<span>Anime</span>
 				<span>Manga</span>
 			</div>
+			<tiles-carousel/>
 		</div>
 	</div>
 </template>
 
 <script>
+import TilesCarousel from './TilesCarousel';
 export default {
+	components:{
+		TilesCarousel
+	}
 
 }
 </script>
