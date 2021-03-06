@@ -150,8 +150,8 @@ export default {
 <style lang="scss">
 	#tiles-carousel-container{
 		margin-top: 53px;
-		margin-left: 198px;
-		width: 1514px; 
+		margin-left: 128px;
+		width: calc(100% - 256px); 
 		//margin-right: 208px;
 		.carousel-cell{
 			width: 362px;
